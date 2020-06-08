@@ -1,6 +1,6 @@
 # eloudcry
 
-Aproject aimed at stifling rape cases in Nigeria
+A project aimed at stifling rape cases in Nigeria
 
 ## Getting Started
 
