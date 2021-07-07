@@ -1,19 +1,6 @@
 <svg width="212" height="212" viewBox="0 0 212 212" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle opacity="0.5" cx="106" cy="106" r="106" fill="white"/>
-<circle opacity="0.7" cx="107.5" cy="105.5" r="75.5" fill="white"/>
-<g filter="url(#filter0_d)">
 <circle cx="107" cy="102" r="45" fill="white"/>
-</g>
+<circle opacity="0.7" cx="107.5" cy="105.5" r="75.5" fill="white"/>
 <path d="M109.648 106.411C109.389 107.401 109.057 108.417 108.653 109.458L84.6904 103.192C84.2943 105.382 84.5436 107.211 85.4385 108.68C86.3854 110.118 87.7464 111.07 89.5214 111.534C92.1633 112.224 94.2916 111.59 95.9064 109.631L107.176 112.578C106.004 114.697 104.417 116.465 102.415 117.882C100.454 119.31 98.2033 120.243 95.6632 120.681C93.123 121.119 90.4494 120.971 87.6425 120.237C84.2576 119.352 81.4331 117.842 79.1691 115.707C76.905 113.571 75.3807 110.967 74.5963 107.896C73.8118 104.824 73.8891 101.493 74.8281 97.9013C75.7672 94.31 77.3098 91.3617 79.4562 89.0563C81.6438 86.7618 84.2474 85.2375 87.267 84.4835C90.2867 83.7296 93.5096 83.8005 96.9357 84.6964C100.279 85.5706 103.068 87.0495 105.301 89.133C107.535 91.2165 109.034 93.7474 109.799 96.7257C110.605 99.7149 110.555 102.943 109.648 106.411ZM99.5409 100.791C100.016 98.9747 99.7744 97.368 98.8167 95.9709C97.859 94.5739 96.4513 93.6325 94.5938 93.1468C92.8188 92.6827 91.1772 92.8047 89.669 93.5129C88.2021 94.2318 87.0759 95.5029 86.2904 97.3262L99.5409 100.791Z" fill="#6C63FF"/>
-<defs>
-<filter id="filter0_d" x="52" y="51" width="110" height="110" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="5"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.25098 0 0 0 0 0.254902 0 0 0 0 0.705882 0 0 0 0.3 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-</filter>
-</defs>
 </svg>

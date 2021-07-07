@@ -1,4 +1,5 @@
 import 'package:eloudcry/splash_screen.dart';
+import 'package:eloudcry/utils/size_config.dart';
 import 'package:eloudcry/utils/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: setLightTheme,
             home: Builder(builder: (BuildContext context) {
+
+              Size size = MediaQuery.of(context).size;
+              SizeConfig.init(context, width: size.width, height: size.height, allowFontScaling: true);
 
               return SplashScreen();
             }),
