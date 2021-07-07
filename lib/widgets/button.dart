@@ -11,6 +11,8 @@ class MkButton extends StatelessWidget {
     this.width,
     this.borderColor = Colors.transparent,
     this.fontWeight = FontWeight.w500,
+    this.isLoading = false,
+    this.progressColor,
     this.color,
     this.textColor,
     this.isRound = false,
@@ -24,7 +26,9 @@ class MkButton extends StatelessWidget {
   Color color;
   final Color textColor;
   final Color borderColor;
+  final Color progressColor;
   final bool isRound;
+  final bool isLoading;
   final double height;
   final double width;
   final double fontSize;
@@ -40,21 +44,25 @@ class MkButton extends StatelessWidget {
         onPressed: onPressed,
         color: color ?? Theme.of(context).primaryColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(isRound ? 36.0 : 0.0),
+          borderRadius: BorderRadius.circular(isRound ? 9.0 : 0.0),
           side: BorderSide(
             width: 2,
-            color: isRound
-                ? Colors.transparent
-                : borderColor.withOpacity(0.2) ?? Theme.of(context).primaryColor,
+            color: Colors.transparent,
           ),
         ),
-        child: MkText(
+        child: !isLoading ? MkText(
           text,
           style: TextStyle(
             fontSize: fontSize,
             fontWeight: fontWeight,
             color: textColor ?? XColors.mainColor(),
           ),
+        ) : SizedBox(
+          child: CircularProgressIndicator(
+            strokeWidth: 2.0,
+            valueColor: progressColor != null ? AlwaysStoppedAnimation<Color>(progressColor): null,),
+          height: 20,
+          width: 20,
         ),
       ),
     );
@@ -71,6 +79,8 @@ class MkOutlinedButton extends StatelessWidget {
     this.borderColor = Colors.transparent,
     this.fontWeight = FontWeight.w500,
     this.color,
+    this.isLoading = false,
+    this.progressColor,
     this.textColor,
     this.isRound = false,
     this.fontSize = 14.0,
@@ -83,7 +93,9 @@ class MkOutlinedButton extends StatelessWidget {
   Color color;
   Color textColor;
   final Color borderColor;
+  final Color progressColor;
   final bool isRound;
+  final bool isLoading;
   final double height;
   final double width;
   final double fontSize;
@@ -97,92 +109,26 @@ class MkOutlinedButton extends StatelessWidget {
       width: width != null ? width : null,
       child: OutlineButton(
         onPressed: onPressed,
-        color: color ?? Theme.of(context).primaryColor,
+        color: Colors.transparent,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(isRound ? 36.0 : 0.0),
+          borderRadius: BorderRadius.circular(isRound ? 9.0 : 0.0),
           side: BorderSide(
-            color: isRound
-                ? borderColor ?? Theme.of(context).primaryColor
-                :  Colors.transparent,
+            color: borderColor ?? Theme.of(context).primaryColor
           ),
         ),
-        child: MkText(
+        child: !isLoading ? MkText(
           text,
           style: TextStyle(
             fontSize: fontSize,
             fontWeight: fontWeight,
             color: textColor ?? XColors.mainColor(),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class XButton extends StatelessWidget {
-
-  final double height;
-  final double width;
-  final Function onClick;
-  final String text;
-  final double radius;
-  final Color buttonColor;
-  final Color textColor;
-  final bool isLoading;
-  final Color progressColor;
-  final double textSize;
-
-  XButton({
-    @required this.onClick,
-    @required this.text,
-    this.height,
-    this.width,
-    this.radius,
-    this.buttonColor,
-    this.textColor,
-    this.isLoading,
-    this.progressColor,
-    this.textSize,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: (){
-        onClick();
-      },
-      child: Container(
-        height: height != null ? height : 50,
-        width: width != null ? width : 100,
-        decoration: BoxDecoration(
-          color: buttonColor ?? Theme.of(context).accentColor,
-          borderRadius: radius != null ? BorderRadius.circular(radius) : BorderRadius.circular(5.0)
-        ),
-        child: Center(
-          child:
-          isLoading == null ?
-          NormalText(
-            text: text,
-            textColor: textColor ?? Colors.white,
-            fontSize: textSize == null ? 17: textSize,
-          ): !isLoading ?
-          NormalText(
-            text: text,
-            textColor: textColor ?? Colors.white,
-            fontSize: textSize == null ? 17: textSize,
-          ): isLoading ?
-          SizedBox(
-            child: CircularProgressIndicator(
-              strokeWidth: 2.0,
-              valueColor: progressColor != null ? AlwaysStoppedAnimation<Color>(progressColor): null,),
-            height: 20,
-            width: 20,
-          ) :
-          NormalText(
-            text: text,
-            textColor: textColor ?? Colors.white,
-            fontSize: textSize == null ? 17: textSize,
-          )
+        ) : SizedBox(
+          child: CircularProgressIndicator(
+            strokeWidth: 2.0,
+            valueColor: progressColor != null ? AlwaysStoppedAnimation<Color>(progressColor): null,),
+          height: 20,
+          width: 20,
         ),
       ),
     );
