@@ -4,7 +4,7 @@ description: A project aimed at stifling rape/accidental cases in Nigeria
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.3.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -12,7 +12,7 @@ dependencies:
 
   permission_handler: ^3.1.0
   geolocation: ^1.1.2
-  flutter_svg: ^0.17.4
+  flutter_svg: ^0.20.0-nullsafety.3
   flutter_audio_recorder: ^0.5.5
   flutter_secure_storage: ^3.3.1+1
   flutter_sms: ^2.0.1+2
@@ -34,7 +34,6 @@ dev_dependencies:
 
 
 flutter:
-
   uses-material-design: true
 
   assets:
