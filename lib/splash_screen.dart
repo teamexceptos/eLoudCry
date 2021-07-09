@@ -1,12 +1,11 @@
 import 'dart:async';
 
-import 'package:eloudcry/screens/onboarding/onboarding.dart';
+import 'package:eloudcry/screens/onboarding/onboarding_screen.dart';
 import 'package:eloudcry/utils/assets.dart';
 import 'package:eloudcry/utils/colors.dart';
 import 'package:eloudcry/utils/navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
 
 class SplashScreen extends StatefulWidget {
 

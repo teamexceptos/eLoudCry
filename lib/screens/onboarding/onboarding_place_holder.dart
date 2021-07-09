@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class OnboardingPlaceHolder extends StatelessWidget {
-
   const OnboardingPlaceHolder({
     @required this.text,
     this.subText,
@@ -17,23 +16,31 @@ class OnboardingPlaceHolder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       child: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
           children: <Widget>[
-
-            Container(
-                height: 180,
-                width: 150,
-                child: onboardingImage
-            ),
+            Container(height: 180, width: 150, child: onboardingImage),
             SizedBox(height: 25),
-            MkText(text, textAlign: TextAlign.center, style:TextStyle(fontSize: 21, fontWeight: FontWeight.w800, color: XColors.white(),)),
+            MkText(text,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.w800,
+                  color: XColors.white(),
+                ),
+            ),
             SizedBox(height: 15),
             Container(
-                child: MkText(subText, textAlign: TextAlign.center, style:TextStyle(fontSize: 19, fontWeight: FontWeight.w300, color: XColors.primaryColor(),)),
+              child: MkText(subText,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 19,
+                    fontWeight: FontWeight.w300,
+                    color: XColors.primaryColor(),
+                  ),
+              ),
             ),
           ],
         ),
