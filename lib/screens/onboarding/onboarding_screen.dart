@@ -1,12 +1,11 @@
-import 'dart:async';
-
 import 'package:eloudcry/screens/onboarding/onboarding_place_holder.dart';
+import 'package:eloudcry/screens/permissions/permission_screen.dart';
 import 'package:eloudcry/utils/assets.dart';
 import 'package:eloudcry/utils/colors.dart';
+import 'package:eloudcry/utils/navigator.dart';
 import 'package:eloudcry/utils/size_config.dart';
 import 'package:eloudcry/widgets/button.dart';
 import 'package:eloudcry/widgets/indicator.dart';
-import 'package:eloudcry/widgets/texts.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -89,11 +88,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 if(positionValueState.value < 3) {
                                   onPageChanged(positionValueState.value + 1);
                                 } else {
+                                  navigateReplace(context, PermissionScreen());
                                   positionValueState.value = 0;
                                 }
                               },
                               color: XColors.primaryColor(),
-                              text: "Next",
+                              text: value == 3 ? "Continue" : "Next",
                               textColor: Colors.white,
                               isRound: true,
                               width: SizeConfig.screenWidthDp - 30,
@@ -109,7 +109,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 onPressed: () {
 
                                 },
-                                text: "Skip",
+                                text: value == 3 ? "Login" : "Skip",
                                 isRound: true,
                                 width: SizeConfig.screenWidthDp - 30,
                                 height: 50,
