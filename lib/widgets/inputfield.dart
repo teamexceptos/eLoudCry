@@ -197,7 +197,7 @@ class MkInputField2 extends StatelessWidget {
 class MkUnderlineInputField extends StatelessWidget {
   const MkUnderlineInputField(
       {@required this.controller,
-        @required this.currentNode,
+        this.currentNode,
         this.hint,
         this.nextNode,
         this.isPassword = false,
@@ -271,14 +271,15 @@ class MkUnderlineInputField extends StatelessWidget {
         suffixIcon: suffixIcon,
         hintText: hint,
         border: UnderlineInputBorder(
-          borderRadius: BorderRadius.circular(5),
-          borderSide: BorderSide(color: XColors.mainColor().withOpacity(0.4)),
+          borderRadius: BorderRadius.circular(1),
+          borderSide: BorderSide(color: XColors.primaryColor().withOpacity(0.4)),
         ),
-        fillColor: XColors.mainColor().withOpacity(0.03),
+        fillColor: XColors.mainColor().withOpacity(0.02),
         filled: true,
         contentPadding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
-        hintStyle: TextStyle(color: Colors.grey, fontSize: 13.0),
+        hintStyle: TextStyle(color: Colors.grey, fontSize: 18.0, fontWeight: FontWeight.bold),
       ),
+      style: TextStyle(color: XColors.textColor(), fontWeight: FontWeight.bold, fontSize: 18),
     );
   }
 }

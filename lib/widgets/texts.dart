@@ -1,3 +1,4 @@
+import 'package:eloudcry/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class TitleText extends StatelessWidget {
@@ -85,6 +86,7 @@ class MkText extends StatelessWidget {
     Key key,
     this.textAlign,
     this.style,
+    this.textWidth,
     this.maxLines,
     this.overflow = TextOverflow.ellipsis,
   })  : assert(text != null),
@@ -93,6 +95,7 @@ class MkText extends StatelessWidget {
   final String text;
   final TextAlign textAlign;
   final TextStyle style;
+  final double textWidth;
   final int maxLines;
   final TextOverflow overflow;
 
@@ -100,6 +103,7 @@ class MkText extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
+      width: textWidth ?? null,
       child: Text(
         text,
         maxLines: maxLines,

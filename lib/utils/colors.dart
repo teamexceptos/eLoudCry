@@ -11,6 +11,7 @@ class XColors {
   static Color primaryColor() => Color(0xFF4041B4);
   static Color decoratorContainerColor() => getDarkMode != true ? Color(0xFFFFFFFF) : Color(0xFF2D0203) ;
   static Color textColor() => getDarkMode != true ? Color(0xFF4041B4) : Color(0xFFFFFFFF);
+  static Color alphaTextColor() => getDarkMode != true ? Color(0xFF4041B4).withOpacity(0.7) : Color(0xFFFFFFFF).withOpacity(0.7);
 
   static const List<Color> grades_gradient = <Color>[
     Color(0xFF8CCA3B),
