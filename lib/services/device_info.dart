@@ -7,7 +7,7 @@ class DeviceService {
   Map<String, dynamic> deviceData = {};
 
   Future<Map<String, dynamic>> getDeviceData() async {
-    Map<String, dynamic> platformOS;
+    Map<String, dynamic> platformOS = {};
 
     if (Platform.isIOS) {
       final iosInfo = await deviceInfo.iosInfo;
