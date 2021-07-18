@@ -4,7 +4,7 @@ import 'package:eloudcry/utils/colors.dart';
 import 'package:eloudcry/utils/navigator.dart';
 import 'package:eloudcry/utils/providers.dart';
 import 'package:eloudcry/utils/size_config.dart';
-import 'package:eloudcry/views/view_model/permission_viewmodel.dart';
+import 'package:eloudcry/screens/permissions/permission_viewmodel.dart';
 import 'package:eloudcry/widgets/button.dart';
 import 'package:eloudcry/widgets/texts.dart';
 import 'package:flutter/material.dart';
@@ -59,9 +59,10 @@ class _PermissionScreenState extends State<PermissionScreen> {
                     text: TextSpan(
                       text: "Make",
                       style: TextStyle(
+                          fontFamily: "Comfortaa",
                           color: XColors.white(),
                           fontSize: 26,
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w700),
                       children: <TextSpan>[
                         TextSpan(
                           text: ' eLoudCry',
