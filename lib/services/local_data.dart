@@ -6,7 +6,7 @@ Future saveData({dynamic data, String key}) async {
   await _secureStorage.write(key: key, value: data);
 }
 
-Future<String> reaData({String key}) async {
+Future<String> readData({String key}) async {
   String data = await _secureStorage.read(key: key);
   return data;
 }

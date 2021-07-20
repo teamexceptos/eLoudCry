@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:eloudcry/models/profile/profile_model.dart';
+import 'package:eloudcry/screens/auth/otp_screen.dart';
 import 'package:eloudcry/services/device_info.dart';
 import 'package:eloudcry/utils/colors.dart';
+import 'package:eloudcry/utils/navigator.dart';
 import 'package:eloudcry/utils/size_config.dart';
 import 'package:eloudcry/widgets/button.dart';
 import 'package:eloudcry/widgets/inputfield.dart';
@@ -224,21 +226,23 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
                   child: MkButton(
                     onPressed: () async {
 
-                      Map<String, dynamic> deviceInfoMap = await DeviceService().getDeviceData();
+                      // Map<String, dynamic> deviceInfoMap = await DeviceService().getDeviceData();
+                      //
+                      // ProfileModel profile = new ProfileModel(
+                      //   data: DataBean(
+                      //       fullname: _fullnameTextController.text,
+                      //     phonenumber: _phonenmberTextController.text,
+                      //     deviceInfo: DeviceInfoBean(
+                      //       deviceName: deviceInfoMap["deviceName"],
+                      //       deviceUUID: deviceInfoMap["deviceUUID"],
+                      //     ),
+                      //
+                      //   ),
+                      // );
+                      //
+                      // print(profile.toJson().toString());
 
-                      ProfileModel profile = new ProfileModel(
-                        data: DataBean(
-                            fullname: _fullnameTextController.text,
-                          phonenumber: _phonenmberTextController.text,
-                          deviceInfo: DeviceInfoBean(
-                            deviceName: deviceInfoMap["deviceName"],
-                            deviceUUID: deviceInfoMap["deviceUUID"],
-                          ),
-
-                        ),
-                      );
-
-                      print(profile.toJson().toString());
+                      navigate(context, OTPScreen());
 
 
                     },
