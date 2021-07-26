@@ -14,7 +14,7 @@ ThemeData _buildLightTheme() {
     dividerColor: Colors.white54,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
-    fontFamily: "Montserrat",
+    fontFamily: "Comfortaa",
   );
 }
 
@@ -29,7 +29,7 @@ ThemeData _buildDarkTheme() {
     dividerColor: Colors.black12,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
-    fontFamily: "Montserrat",
+    fontFamily: "Comfortaa",
   );
 }
 
